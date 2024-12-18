@@ -8,6 +8,20 @@ This project focuses on predicting store sales using historical sales data combi
 
 ---
 
+#### **Telegram App**
+
+I developed a Telegram application using an API that provides sales forecasts for the next 6 weeks. The app integrates predictive models with user-friendly interaction, allowing businesses to easily access future sales insights directly through Telegram.
+
+![app](images/app.png)
+
+---
+
+#### **Business Problem**
+
+The CFO of the company held a meeting with all Store Managers, requesting that each manager provide a daily sales forecast for the next 6 weeks. Following this meeting, all Store Managers reached out to you, requesting a sales forecast specifically for their respective stores. This created an immediate need for an efficient and accurate forecasting solution to meet these demands and support strategic decision-making.
+
+---
+
 #### **Project Structure**
 
 1. **Data Preparation**
