@@ -12,7 +12,7 @@ This project focuses on predicting store sales using historical sales data combi
 
 I developed a Telegram application using an API that provides sales forecasts for the next 6 weeks. The app integrates predictive models with user-friendly interaction, allowing businesses to easily access future sales insights directly through Telegram.
 
-![app](images/app.png)
+![app](img/app.png)
 
 ---
 
