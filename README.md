@@ -1,104 +1,87 @@
-### **Store Sales Prediction**
+# Previsão de Vendas em Lojas
 
----
+## Visão Geral do Projeto
 
-#### **Overview**
+Neste projeto, desenvolvi uma solução completa para **previsão de vendas** utilizando dados históricos e metadados de lojas. O processo envolveu desde o preparo e análise exploratória dos dados até a engenharia de atributos e modelagem preditiva com aprendizado de máquina.
 
-This project focuses on predicting store sales using historical sales data combined with store metadata. The analysis spans data preparation, feature engineering, and machine learning modeling to build a robust predictive framework for sales forecasting.
+**Objetivo**: Prever as vendas diárias para as próximas 6 semanas, oferecendo suporte às decisões estratégicas da empresa de maneira escalável e automatizada.
 
----
+**Resultado-chave**:  
+> Aplicativo no Telegram conectado a modelos de previsão, permitindo que cada gerente de loja consulte, de forma prática, suas projeções futuras de vendas.
 
-#### **Telegram App**
+## Aplicativo no Telegram
 
-I developed a Telegram application using an API that provides sales forecasts for the next 6 weeks. The app integrates predictive models with user-friendly interaction, allowing businesses to easily access future sales insights directly through Telegram.
+Foi desenvolvido um aplicativo com API integrada ao Telegram, que disponibiliza previsões personalizadas de vendas por loja para as próximas 6 semanas.  
+Essa interface oferece **acesso simples, direto e funcional** aos resultados da modelagem preditiva.
 
 ![app](img/app.png)
 
----
+## Problema de Negócio
 
-#### **Business Problem**
+Após uma reunião com o CFO, os gerentes de loja foram solicitados a apresentar previsões detalhadas de vendas. A demanda simultânea por previsões individuais criou a necessidade urgente de uma solução precisa, automatizada e escalável.
 
-The CFO of the company held a meeting with all Store Managers, requesting that each manager provide a daily sales forecast for the next 6 weeks. Following this meeting, all Store Managers reached out to you, requesting a sales forecast specifically for their respective stores. This created an immediate need for an efficient and accurate forecasting solution to meet these demands and support strategic decision-making.
+## Estrutura do Projeto
 
----
+### 1. **Preparação dos Dados**
+- Leitura e junção de datasets de vendas e informações de loja
+- Padronização de nomes (`snake_case`)
+- Tratamento de dados faltantes e ajustes de tipo
 
-#### **Project Structure**
+### 2. **Análise Exploratória (EDA)**
+- Sumários estatísticos
+- Visualizações de séries temporais e desempenho por loja
+- Análise de sazonalidade e identificação de outliers
 
-1. **Data Preparation**
-   - Loading and merging sales and store datasets.
-   - Renaming columns to snake_case for consistency.
-   - Handling missing values and adjusting data types.
+### 3. **Engenharia de Atributos**
+- Criação de variáveis para capturar tendências e sazonalidade
+- Codificação de variáveis categóricas
+- Normalização de atributos numéricos
 
-2. **Exploratory Data Analysis (EDA)**
-   - Statistical summary for numerical and categorical attributes.
-   - Visualization of sales trends:
-     - Store performance.
-     - Seasonality patterns and trends over time.
-   - Identification of outliers and data anomalies.
+### 4. **Estatísticas Descritivas**
+- Análise de tendência central e variabilidade
+- Relações entre atributos e a variável alvo (`sales`)
 
-3. **Feature Engineering**
-   - Transforming raw data into actionable features.
-   - Encoding categorical variables and scaling numerical features.
-   - Creating new features to capture trends and seasonality.
+### 5. **Modelagem Preditiva**
+- Treinamento e validação com modelos como:
+  - Regressão Linear
+  - Random Forest Regressor
+  - XGBoost Regressor
+- Otimização de hiperparâmetros
+- Avaliação com **MAE**, **MAPE** e **RMSE**
 
-4. **Descriptive Statistics**
-   - Analyzing central tendency and variability of key metrics.
-   - Investigating relationships between features and target variables.
+### 6. **Geração de Insights e Forecasting**
+- Avaliação da importância das variáveis
+- Comparação entre previsões e vendas reais
 
-5. **Machine Learning Modeling**
-   - Training and validating models including:
-     - Linear Regression
-     - Random Forest Regressor
-     - XGBoost Regressor
-   - Hyperparameter tuning for optimal performance.
-   - Model evaluation using cross-validation metrics (MAE, MAPE, RMSE).
+## Funcionalidades do Projeto
 
-6. **Insights & Forecasting**
-   - Evaluating the importance of features.
-   - Visualizing model predictions and comparing them to actual sales.
+- **Pipeline automatizado** de preparação de dados
+- **Visualizações de alto impacto**: linhas do tempo, heatmaps e comparações por loja
+- **Validação temporal personalizada** com rolling validation
+- **Modelos robustos** de ensemble e boosting
 
----
+## Bibliotecas e Ferramentas
 
-#### **Key Features**
+- **Manipulação de Dados**: `pandas`, `numpy`
+- **Visualização**: `matplotlib`, `seaborn`
+- **Modelagem**: `scikit-learn`, `xgboost`, `boruta`
 
-1. **Data Cleaning & Organization**
-   - Automated pipeline for handling missing values and merging datasets.
-   - Consistent formatting and preprocessing steps.
+## Principais Insights
 
-2. **Visualization**
-   - Time series plots for sales trends.
-   - Bar charts and heatmaps to compare store performance and correlations.
+- **Sazonalidade clara**: Picos de venda em determinados meses e feriados
+- **Desempenho por loja**: Algumas lojas se destacam sistematicamente
+- **Fatores influentes**: Promoções, feriados e tipo de loja são cruciais
 
-3. **Predictive Modeling**
-   - Custom cross-validation function to evaluate model performance over rolling time periods.
-   - Integration of ensemble and boosting models for accurate predictions.
+## Próximos Passos
 
----
+- Incorporar fatores externos (ex: clima, economia local)
+- Deploy em ambiente de produção para previsões em tempo real
+- Criar alertas automáticos com base em desvios de previsão
 
-#### **Tools & Libraries**
+## Competências Demonstradas
 
-- **Data Manipulation:** pandas, numpy
-- **Visualization:** seaborn, matplotlib
-- **Modeling:** scikit-learn, xgboost, boruta
-
----
-
-#### **Insights**
-
-- **Seasonality:** Sales demonstrate clear seasonal trends, with peaks during specific months and holidays.
-- **Store-Specific Trends:** Certain stores consistently outperform others, indicating the need for tailored strategies.
-- **Feature Importance:** Features like promotions, holidays, and store type significantly impact sales.
-
----
-
-#### **Next Steps**
-
-- Enhance feature engineering by incorporating external factors such as weather and economic indicators.
-- Deploy the model in a real-time environment to forecast future sales dynamically.
-
----
-
-#### **Acknowledgments**
-
-This project was conducted using open-source libraries and datasets. Special thanks to contributors for their efforts in building tools and frameworks used in this analysis.
-
+- **Forecasting com séries temporais**
+- **Engenharia de Atributos voltada a negócios**
+- **Automatização de processos analíticos**
+- **Integração de modelos com interfaces práticas (Telegram Bot)**
+- **Visão de produto e usabilidade em soluções analíticas**
